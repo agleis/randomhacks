@@ -1,7 +1,11 @@
 body {
 	margin: 0;
+<<<<<<< HEAD
 	font-family: sans-serif;
 	width: 100%;
+=======
+    font-family: 'Lato', sans-serif;	
+>>>>>>> b5adfe9049b3a9181180dcaca212edb5db86b60f
 }
 
 #body {
