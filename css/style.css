@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	font-family: sans-serif;
 	width: 100%;
-    font-family: 'Lato', sans-serif;	
+    font-family: 'Lato', sans-serif;
 }
 
 #body {
@@ -13,26 +13,35 @@ body {
 	line-height: 100px;
 	width:100%;
 	height: 100px;
-	background-color: #39A39E;
+	background-color: #39a39e;
 	margin: 0;
-	border-bottom: 2px solid #39A39E;
 }
 
 #left-sidebar {
 	float: left;
 	left: 0px;
-	width: 200px;
+	width: 300px;
 }
 
 ul {
 	list-style: none;
 }
 
+#left-logo{
+	margin-top: auto;
+	margin-bottom: auto;
+	position: relative;
+	left:30px;
+	margin-right:15px;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
 #slideshow { 
-    margin: 50px auto; 
+    margin: 0 auto; 
     position: absolute; 
-	left: 300px;
-	top: 150px;
+	left: 400px;
+	top: 200px;
     width: 600px; 
     height: 500px; 
     padding: 10px; 
@@ -47,32 +56,30 @@ ul {
     bottom: 10px; 
 }
 
-#title img {
+#title a img {
 	position: absolute;
 	top: 0;
 	left: 0;
 }
-#title #links span {
-	display: inline-block;
-	text-decoration: none;
-	width: 200px;
-	height: 100px;
-	text-align: center;
-	border-right: 1px solid #E2E2E2;
+
+#left-sidebar ul li {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
-#links {
-	margin-left: 300px;
-	height: 100px;
+#sidebar-title {
+	color: #39a39e;
+	text-decoration: underline;
 }
 
-#title #links span a {
-	display: block;
-	position: relative;
-	top: 40%;
-	text-decoration: none;
-	font-size: 20px;
-	color: white;
+#slideshow-title {
+	position: absolute;
+	left: 550px;
+	margin-top: 10px;
+}
+
+h1 {
+	color: #39a39e;
 }
 
 ul.nav-links li:first-child{

@@ -56,32 +56,10 @@ ul {
     bottom: 10px; 
 }
 
-#title img {
+#title a img {
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-#title #links span {
-	display: inline-block;
-	text-decoration: none;
-	width: 200px;
-	height: 100px;
-	text-align: center;
-	border-right: 1px solid #E2E2E2;
-}
-
-#links {
-	margin-left: 300px;
-	height: 100px;
-}
-
-#title #links span a {
-	display: block;
-	position: relative;
-	top: 40%;
-	text-decoration: none;
-	font-size: 20px;
-	color: white;
 }
 
 #left-sidebar ul li {
