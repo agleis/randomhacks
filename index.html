@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang=''>
+<head>
+  <title>Coding Connection</title>
+  <meta charset="UTF-8">
+  <script src="//www.parsecdn.com/js/parse-1.4.0.js"></script>
+  <link rel='stylesheet' href='style.css'>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	},  3000);
+</script>
+<body>
+	<div id="title">
+		<img src="logo.gif">
+		<button>History</button>
+		<button> About Us</button>
+		<button>Log In</button>
+	</div>
+	<div id="body">
+		<div id="left-sidebar">
+			<ul>
+				<li id="sidebar-title">
+					<h1>Get Skillz</h1>
+				</li>
+				<li>
+					<a href="http://www.code.org"><img src="https://code.org/images/logo.png"></a>
+					<br />
+					<a href="http://www.codeacademy.com"><img src="https://cdn-production.codecademy.com/assets/logo/logo--dark-blue-ac069c03cf75e3cb300995028104f92e.svg" width="200px"></a>
+					<br />
+					<a href="http://scratch.mit.edu"><img src="https://scratch.mit.edu/images/logo_sm.png" width="150px"></a>
+					<br />
+					<a href="https://www.khanacademy.org/computing/computer-programming"><img src="https://d3q6qq2zt8nhwv.cloudfront.net/platform/ad4b22b3481f4f0fa379bbde3f82c9bb.png" width="200px"></a>
+				</li>
+			</ul>
+		</div>
+		<div id="slideshow">
+			<div id="img1">
+				<img src="img1.png" width="600px" height="500px">
+			</div>
+		</div>
+	</div>
+</body>

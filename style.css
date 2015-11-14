@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	font-family: sans-serif;	
+}
+
+#body {
+	text-align: center;
+}
+
+#title {
+	width: 100vw;
+	background-color: #39A39E;
+	margin: 0;
+}
+
+#left-sidebar {
+	float: left;
+	left: 0px;
+	width: 200px;
+}
+
+ul {
+	list-style: none;
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 600px; 
+    height: 500px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
