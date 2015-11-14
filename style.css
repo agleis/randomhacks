@@ -1,6 +1,7 @@
 body {
 	margin: 0;
-	font-family: sans-serif;	
+	font-family: sans-serif;
+	width: 100%;
 }
 
 #body {
@@ -8,9 +9,11 @@ body {
 }
 
 #title {
-	width: 100vw;
+	width: 1345px;
+	height: 100px;
 	background-color: #39A39E;
 	margin: 0;
+	border-bottom: 2px solid #39A39E;
 }
 
 #left-sidebar {
@@ -25,7 +28,9 @@ ul {
 
 #slideshow { 
     margin: 50px auto; 
-    position: relative; 
+    position: absolute; 
+	left: 300px;
+	top: 150px;
     width: 600px; 
     height: 500px; 
     padding: 10px; 
@@ -38,4 +43,32 @@ ul {
     left: 10px; 
     right: 10px; 
     bottom: 10px; 
+}
+
+#title img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#title #links span {
+	display: inline-block;
+	text-decoration: none;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	border-right: 1px solid #E2E2E2;
+}
+
+#links {
+	margin-left: 300px;
+	height: 100px;
+}
+
+#title #links span a {
+	display: block;
+	position: relative;
+	top: 40%;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
 }

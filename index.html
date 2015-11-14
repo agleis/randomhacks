@@ -8,24 +8,15 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 </head>
 
-<script>
-	$("#slideshow > div:gt(0)").hide();
-
-	setInterval(function() { 
-	  $('#slideshow > div:first')
-		.fadeOut(1000)
-		.next()
-		.fadeIn(1000)
-		.end()
-		.appendTo('#slideshow');
-	},  3000);
-</script>
 <body>
 	<div id="title">
-		<img src="logo.gif">
-		<button>History</button>
-		<button> About Us</button>
-		<button>Log In</button>
+		<img src="logo.gif" height="100px" />
+		<div id="links">
+			<span><a href="why.html">Why CS</a></span>
+			<span><a href="about.html"> About Cornell GWC</a></span>
+			<span><a href="media.html">In The Media</a></span>
+			<span><a href="login.html">Log In</a></span>
+		</div>
 	</div>
 	<div id="body">
 		<div id="left-sidebar">
@@ -48,6 +39,25 @@
 			<div id="img1">
 				<img src="img1.png" width="600px" height="500px">
 			</div>
+			<div id="img2">
+				<img src="img2.png" width="600px" height="500px">
+			</div>
 		</div>
 	</div>
 </body>
+
+
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	},  3000);
+</script>
+
+</html>
