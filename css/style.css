@@ -2,10 +2,7 @@ body {
 	margin: 0;
 	font-family: sans-serif;
 	width: 100%;
-<<<<<<< HEAD
-=======
     font-family: 'Lato', sans-serif;	
->>>>>>> 24fb5668612319c9938c0b42c992509ca3dcc656
 }
 
 #body {
@@ -16,35 +13,26 @@ body {
 	line-height: 100px;
 	width:100%;
 	height: 100px;
-	background-color: #39a39e;
+	background-color: #39A39E;
 	margin: 0;
+	border-bottom: 2px solid #39A39E;
 }
 
 #left-sidebar {
 	float: left;
 	left: 0px;
-	width: 300px;
+	width: 200px;
 }
 
 ul {
 	list-style: none;
 }
 
-#left-logo{
-	margin-top: auto;
-	margin-bottom: auto;
-	position: relative;
-	left:30px;
-	margin-right:15px;
-	display: inline-block;
-	text-transform: uppercase;
-}
-
 #slideshow { 
-    margin: 0 auto; 
+    margin: 50px auto; 
     position: absolute; 
-	left: 400px;
-	top: 200px;
+	left: 300px;
+	top: 150px;
     width: 600px; 
     height: 500px; 
     padding: 10px; 
@@ -87,26 +75,6 @@ ul {
 	color: white;
 }
 
-<<<<<<< HEAD
-#left-sidebar ul li {
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-#sidebar-title {
-	color: #39a39e;
-	text-decoration: underline;
-}
-
-#slideshow-title {
-	position: absolute;
-	left: 550px;
-	margin-top: 10px;
-}
-
-h1 {
-	color: #39a39e;
-=======
 ul.nav-links li:first-child{
 	margin-left:30px;
 }
@@ -146,5 +114,4 @@ ul.nav-links li:hover{
 a, a:link, a:visited, a:active, a:hover{
 	text-decoration: none;
 	color:inherit;
->>>>>>> 24fb5668612319c9938c0b42c992509ca3dcc656
 }
