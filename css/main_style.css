@@ -166,15 +166,12 @@ ul {
 
 #yourGroups {
     display: inline-block;
-    border-style: solid;
-    border-color: #85b7b5;
-    border-width: 2px;
     float: left;
     margin-left: 20px;
     margin-top: 50px;
-    width: 20%;
+    width: 23%;
     height: 100%;
-    padding:10px 10px;
+    padding:10px 5px;
 }
 
 #groupActivity {
@@ -240,6 +237,12 @@ h1#uname{
 #user_feed{
     padding-top:45px;
 }
+
+#yourGroups ul li{
+    padding-top:10px;
+}
+
+
 
 * {
   margin: 0;
