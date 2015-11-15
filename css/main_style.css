@@ -161,8 +161,9 @@ ul {
     float: left;
     margin-left: 20px;
     margin-top: 50px;
-    width: 25%;
+    width: 20%;
     height: 100%;
+    padding:10px 10px;
 }
 
 #groupActivity {
@@ -175,6 +176,7 @@ ul {
     margin-top: 50px;
     width: 70%;
     height: 100%;
+    padding:10px 10px;
 }
 
 #groupActivity ul li {
@@ -229,4 +231,26 @@ h1#uname{
 
 #user_feed{
     padding-top:45px;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 50px; 
+}
+.site-footer {
+  background-color: #39a39e;
 }
