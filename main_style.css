@@ -148,6 +148,7 @@ ul {
 #yourGroups {
     display: inline-block;
     border-style: solid;
+    border-color: #39a39e;
     border-width: 2px;
     float: left;
     margin-left: 20px;
@@ -159,12 +160,17 @@ ul {
 #groupActivity {
     display: inline-block;
     border-style: solid;
+    border-color: #39a39e;
     border-width: 2px;
     float: right;
     margin-right: 20px;
     margin-top: 50px;
     width: 70%;
     height: 100%;
+}
+
+#groupActivity ul li {
+    padding:15px;
 }
 
 #username-field {
