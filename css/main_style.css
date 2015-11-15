@@ -24,6 +24,10 @@ b{
     padding: 5px 35px;
 }
 
+#message-field{
+    margin-top:25px;
+}
+
 #title {
     line-height: 60px;
     width:100%;
@@ -146,7 +150,9 @@ ul {
 #user_info .info_section, #main_side .info_section{
     width: 100%;
     border-top-style: solid;
+    border-color:;
     border-top-width: 1px;
+    margin: 10px 10px;
 }
 
 #user_info .info_section h2, #main_side .info_section h2{
