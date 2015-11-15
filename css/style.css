@@ -9,8 +9,10 @@ body {
 	text-align: center;
 }
 
-@media(max-width:920px){
-	
+@media (max-width:920px){
+	#logo h2 {
+		visibility: hidden;
+	}
 }
 
 ul.nav-links li:first-child{
