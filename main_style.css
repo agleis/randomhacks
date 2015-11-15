@@ -195,16 +195,6 @@ h3 {
     margin-top: 0px;
 }
 
-
-footer {
-    position:absolute;
-    bottom:0;
-    text-align: center;
-    background-color: #39a39e;
-    width: 100%;
-    color: white;
-}
-
 #main_feed{
     overflow:auto;
 }
