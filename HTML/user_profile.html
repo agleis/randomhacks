@@ -20,52 +20,57 @@
             </ul>
 		</div>
 
-		<div id = "nameContainer">
-            <h1>User Name</h1>
+
+        <div class="container">
+    		<div id = "nameContainer">
+                <h1 id="uname">User Name</h1>
+            </div>
+
+            <div class = "profileAvatar">
+    			<img src="../img/avatar.png" height="280" width="200"/>
+            	<button type="button" onclick="location.href='user_edit.html'">Edit</button>
+            </div>
+
+            <div id= "user_feed">
+                <div class = "post">
+                	<img src="../img/avatar.png" height="30" width="30"> Test Post1
+                </div>
+                <div class = "post">
+                	<img src="../img/avatar.png" height="30" width="30"> Test Post2
+                </div>
+                <div class = "post">
+                	<img src="../img/avatar.png" height="30" width="30"> Test Post3
+                </div>
+                <div class = "post">
+                	<img src="../img/avatar.png" height="30" width="30"> Test Post4
+                </div>
+            </div>
+
+            <div id="user_info">
+            	<div class = "info_section">
+    				<h2>Friends</h2>
+            	</div>
+                 <div class = "info_section">
+    				<h2>About Me</h2>
+    				<p>I am ..... I am intrested in ....</p>
+            	</div>
+            	<div class = "info_section">
+            		<h2>My Skills</h2>
+                	<ul>
+                    	<li>Python</li>
+                   		<li>HTML</li>
+                	</ul>
+            	</div>   
+            	<div class = "info_section">
+    				<h2>Badges</h2>
+    				<p>Code Academy</p>
+            	</div>      
+                    
+            </div>
         </div>
 
-        <div class = "profileAvatar">
-			<img src="../img/avatar.png"/>
-        	<button type="button" onclick="location.href='user_edit.html'">Edit</button>
-        </div>
-
-        <div id= "user_feed">
-            <div class = "post">
-            	Test Post1
-            </div>
-            <div class = "post">
-            	Test Post2
-            </div>
-            <div class = "post">
-            	Test Post3
-            </div>
-            <div class = "post">
-            	Test Post4
-            </div>
-        </div>
-
-        <div id="user_info">
-        	<div class = "info_section">
-				<h2>Friends</h2>
-        	</div>
-             <div class = "info_section">
-				<h2>About Me</h2>
-				<p>I am ..... I am intrested in ....</p>
-        	</div>
-        	<div class = "info_section">
-        		<h2>My Skills</h2>
-            	<ul>
-                	<li>Python</li>
-               		<li>HTML</li>
-            	</ul>
-        	</div>   
-        	<div class = "info_section">
-				<h2>Badges</h2>
-				<p>Code Academy</p>
-        	</div>      
-                
-        </div>
-        </div>                
-      
+      <footer>
+    <p>Copyright 2015, Coding Connectors Inc.</p>
+  </footer>
     </body>
 </html>
