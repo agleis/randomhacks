@@ -3,6 +3,7 @@ html {
 }
 body {
 	margin: 0;
+    color:#000;
     font-family: 'Lato', sans-serif;	
     height: 100%;
 }
