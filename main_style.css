@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+    color:#000;
     font-family: 'Lato', sans-serif;	
     height: 100%;
 }
@@ -144,6 +145,11 @@ ul {
     margin-top: 5px;
 }
 
+#username-field{
+    margin-left: 40%;
+    margin-right: -60%;
+}
+
 h3 {
     font-size: 35px;
     position: absolute;
@@ -152,4 +158,3 @@ h3 {
     color: white;
     margin-top: 0px;
 }
-
