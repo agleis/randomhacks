@@ -3,19 +3,32 @@
     <head>
         <meta charset="utf-8">
         <title>Log In</title>
-        <link rel="Stylesheet" type = "text/css" href = "css/stylesheet.css">
+        <link rel="Stylesheet" type = "text/css" href = "css/main_style.css">
     </head>
     <body>
-      <div>
+    <div id="title">
+      <a href="index.html"><img src="img/logo.png" height="60px" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      <li><a href="why.html">Why CS</a></li>
+      <li><a href="about.html"> About Cornell GWC</a></li>
+      <li><a href="media.html">The Buzz</a></li>
+      <li><a href="login.html">Log In</a></li>
+      </ul>
+    </div>
+    <bR><br><br><bR>
+    <div id="username-field">
         <form>
-            User name:<br>
-        <input type="text" name="username">
+            Username:
+        <input type="text" name="username"><br>
         <br>
-            User password:<br>
+            Password:
         <input type="password" name="psw">
         </form>
-        <button type="button" onclick="location.href='HTML/main_feed.html'">Login</button>
-        <button type="button" onclick="location.href='forgot_password.html'">Forgot Password</button>
-      </div>
+        <br>
+         <button type="button" onclick="location.href='HTML/main_feed.html'">Login</button>
+        <button type="button" onclick="location.href='HTML/forgot_password.html'">Forgot Password</button>
+        <button type="button" onclick="location.href='HTML/sign_up.html'">Sign Up Now!</button>
+    </div>
     </body>
 </html>
