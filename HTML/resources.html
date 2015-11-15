@@ -3,46 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title>Resources</title>
-        <link rel="Stylesheet" type = "text/css" href = "css/stylesheet.css">
+        <link rel="Stylesheet" type = "text/css" href = "../main_style.css">
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     </head>
     <body>
-      <div id= "header">
-      	<h1>Coding Connection</h1>
-      	<div id= "messages">
-      		<a href= "message.html">messages</a>
-      	</div>
-      	<div id= "settings">
-      		<a href="../index.html">log out</a>
-      	</div>
+      <div id="title">
+      <a href="..\index.html"><img src="../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
+      <ul class="nav-links">
+        <li><a href="main_feed.html">Home</a></li>
+                <li><a href="message.html">Messages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a href="user_profile.html">My Profile</a></li>
+                <li><a href="..\index.html">Log Out</a></li>
+        </ul>
       </div>
-      <div id= "menu">
-      <ul>
-      	<li><a href="main_feed.html">Home</a></li>
-      	<li><a href= "user_profile.html">Profile</a></li>
-      	<li><a href= "friends.html">Friends</a></li>
-      	<li><a href= "groups.html">Groups</a></li>
-      	<li><a href= "events.html">Events</a></li>
-      	<li><a href= "resources.html">Resources</a></li>
-      </ul>
-  	  </div>
-
   	  <div id= "main">
-  	  	<h3>New to coding? Get started here!</h3>
-  	  		Tutorial Websites:
+  	  	<center>
+        <div id= "resources-intro">
+          <h2>New to coding? Get started here!</h2>
+        </div>
   	  		<ul>
   	  			<li><a href= "https://www.codeacademy.com">Code Academy</a></li>
   	  			<li><a href= "https://www.code.org">Code.org</a></li>
   	  			<li><a href= "https://www.scratch.mit.edu">Scratch</a></li>
   	  			<li><a href= "https://www.khanacademy.org/computing/computer-programming">Khan Academy</a></li>
   	  		</ul>
-  	  		Check out these languages:
+  	  		<h2>Check out these languages:</h2>
   	  		<table>
   	  			<tr>
   	  				<td></td>
-  	  				<td>Java</td>
-  	  				<td>Python</td>
-  	  				<td>Javascript</td>
+  	  				<td><b>Java</b></td>
+  	  				<td><b>Python</b></td>
+  	  				<td><b>Javascript</b></td>
   	  			</tr>
   	  			<tr>
   	  				<td>Variables</td>
@@ -99,24 +92,25 @@
   	  				<td>Needed at the end of a statement</td>
   	  			</tr>
   	  		</table>
-
-  	  		<ul>
-  	  			<li>
-  	  				HTML: <br>
-  	  				&lt;!Doctype html&gt; -- lets the computer know this is an html file <br>
+          <br>
+  	  				<h4>HTML:</h4> <br>
+          </center>
+          <center>
+          <table align="center"><tr><td>
+  	  				&lt;!Doctype html&gt; <b>-- lets the computer know this is an html file</b> <br>
   	  				&lt; html &gt;<br>
-  	  					&lt; head &gt; <br>
-  	  						&lt; title &gt; title &lt; /title &gt; -- the / means this is an ending tag-- every tag needs an ending tag! <br>
-  	  					&lt; /head &gt; <br>
+  	  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt; head &gt; <br>
+  	  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt; title &gt; title &lt; /title &gt; <b>-- the / means this is an ending tag-- every tag needs an ending tag!</b> <br>
+  	  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt; /head &gt; <br>
   	  					&lt; body &gt; <br>
   	  						This text is in the body! <br>
-  	  						&lt;h1&gt; This text is a header.&lt;/h1&gt; <br>
-                                                        &lt;p&gt; This is a paragraph. &lt;/p&gt; <br>
+  	  						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt; This text is a header.&lt;/h1&gt; <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt; This is a paragraph. &lt;/p&gt; <br>
   	  					&lt; /body &gt;  <br>
-  	  				&lt; /html &gt;<br>
-  	  			</li>
-  	  			<li>
-  	  				CSS: <br>
+  	  				&lt; /html &gt;<br><br>
+          </td></tr></table></center>
+  	  				<center><h4>CSS:</h4> <br>
+              <table> <tr> <td>
   	  				body { <br>
   	  					background-color: white; <br>
   	  					color: blue; <br>
@@ -125,15 +119,12 @@
   	  				h1 { <br>
   	  					color: red;<br>
   	  					text-align: center; <br>
-  	  				} <br>
-  	  			</li>
-  	  		</ul>
-  	  		These two files will result in a webpage that looks like this!
-  	  		<a href="resource_example.html">Click here!</a>
+  	  				} </td></tr></table> <br> </center>
+  	  		<center>These two files will result in a webpage that looks like this!
+  	  		<a href="resource_example.html">Click here!</a></center> <br> <br>
   	  </div>
-
-  	  <div id= "footer">
-      	<h5>Coding Connection</h5>
-      </div>
+  	  <footer>
+    <p>Copyright 2015, Coding Connectors Inc.</p>
+  </footer>
     </body>
 </html>
