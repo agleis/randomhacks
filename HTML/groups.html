@@ -3,43 +3,52 @@
     <head>
         <meta charset="utf-8">
         <title>Groups</title>
-        <link rel="Stylesheet" type = "text/css" href = "css/stylesheet.css">
+        <link rel="Stylesheet" type = "text/css" href = "../main_style.css">
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     </head>
+
     <body>
-      <div id= "header">
-      	<h1>Coding Connection</h1>
-      	<div id= "messages">
-          <a href="messag.html">messages</a>
-      	</div>
-      	<div id= "settings">
-      		<a href= "../index.html">log out</a>
-      	</div>
-      </div>
-      <div id= "menu">
-      <ul>
-      	<li><a href="main_feed.html">Home</a></li>
-      	<li><a href= "user_profile.html">Profile</a></li>
-      	<li><a href= "friends.html">Friends</a></li>
-      	<li><a href= "groups.html">Groups</a></li>
-      	<li><a href= "events.html">Events</a></li>
-      	<li><a href= "resources.html">Resources</a></li>
-      </ul>
-  	  </div>
+    <div id="title">
+      <a href="..\index.html"><img src="../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
+      <ul class="nav-links">
+        <li><a href="main_feed.html">Home</a></li>
+        <li><a href="message.html">Messages</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="groups.html">Groups</a></li>
+        <li><a href="user_profile.html">My Profile</a></li>
+        <li><a href="..\index.html">Log Out</a></li>
+        </ul>
+    </div>
 
-  	  <div id= "main">
+  	<div id= "main">
+
+      <div id= "yourGroups">
+          <h2>Your Groups:</h2>
+          <ul>
+            <li><a href="">WICC Girls Who Code Club</a></li>
+            <li><a href="">OCaml Clique</a></li>
+            <li><a href="">Git Beginners Support Group</a></li>
+            <li><a href="">Haskell Hangout</a></li>
+            <li><a href="">Functional Programming Fans</a></li>
+          </ul>
+        </div>
+
   	  	<div id= "groupActivity">
-  	  		<h3>Recent Group Activity:</h3>
-  	  	</div id= "yourGroups">
-  	  		<h3>Your Groups:</h3>
-  	  		<ul>
-  	  			<li>WICC Girls Who Code Club</li>
-  	  		</ul>
+  	  		<h2>Recent Group Activity:</h2>
+          <ul>
+            <li><a href="">Jane</a> shared a link in <a href="">OCaml Clique</a>: <i>Check out <a href="">this</a> cool monads tutorial I found!</i>
+            </li>
+            <li><a href="">Riley</a> shared a video in <a href="">Git Beginners Support Group</a>: <i>This helped me a lot to understand why branches are useful and how to merge them. Definitely watch it before the next meeting if you were confused!</i>
+              <br /> <iframe width="280" height="157" align="center" src="https://www.youtube.com/embed/uR-9NGrpU-c" frameborder="0" allowfullscreen></iframe>
+            </li>
+          </ul>
   	  	</div>
-  	  </div>
 
-  	  <div id= "footer">
-      	<h5>Coding Connection</h5>
-      </div>
+  	</div>
+
+  <footer>
+    <p>Copyright 2015, Coding Connectors Inc.</p>
+  </footer>
+
     </body>
 </html>
