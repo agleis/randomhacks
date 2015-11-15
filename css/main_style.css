@@ -228,7 +228,7 @@ h1#uname{
 
 #main_feed .post, #user_feed .post, #groupActivity .post{
     background-color:#eee;
-    padding-bottom:80px;
+    padding-bottom:20px;
     padding-top: 7px;
     padding-left:7px;
     border-radius:15px;
