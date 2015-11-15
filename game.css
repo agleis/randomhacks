@@ -1,0 +1,82 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	font-family: sans-serif;
+	color: white;
+	background-color: #000000;
+	background-image: url("img/city.jpg");
+	background-repeat: repeat-x;
+}
+
+a {
+	color: white;
+}
+
+#title {
+	text-align: center;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+#spy {
+	position: absolute;
+	padding: 50px;
+	top: 80px;
+	left: 20px;
+	
+	-webkit-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	-moz-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	-o-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+}
+
+#enemy {
+	position: absolute;
+	left: -999px;
+	top: 0px;
+	height: 200px;
+	
+	-webkit-transition: left 2000ms ease, top 1000ms ease, height 1s ease;
+	-moz-transition: left 2000ms ease, top 1000ms ease, height 1s ease;
+	-o-transition: left 2000ms ease, top 1000ms ease, height 1s ease;
+	transition: left 2000ms ease, top 1000ms ease, height 1s ease;
+}
+
+#input {
+	margin: 0 auto;
+}
+
+#h2 {
+	font-size: 40px;
+	color: white;
+	margin-top: 0px;
+	text-decoration: none;
+}
+
+#logo {
+	width: 20vw;
+}
+
+#blurb {
+	border: 1px solid #e2e2e2;
+	position: absolute;
+	top: 400px;
+	left: 300px;
+	width: 300px;
+}
+
+#blurb #main {
+	padding: 10px;
+}
+
+#blurb #click {
+	padding-left: 10px;
+}
