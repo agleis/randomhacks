@@ -221,7 +221,7 @@ h1#uname{
     padding-bottom:50px;
 }
 
-#main_feed .post, #user_feed .post{
+#main_feed .post, #user_feed .post, #groupActivity .post{
     background-color:#eee;
     padding-bottom:80px;
     padding-top: 7px;
