@@ -76,11 +76,6 @@ a, a:link, a:visited, a:active, a:hover{
 ul {
     list-style: none;
 }
-
-table {
-    text-align: center;
-}
-
 #main_feed li, #user_info li{
     padding: 2px;
     margin: 2px;
