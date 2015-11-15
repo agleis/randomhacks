@@ -188,6 +188,63 @@ table {
     margin-right: -60%;
 }
 
+#username-field {
+    margin-left: 40%;
+    margin-right: -60%;
+}
+
+#message-side {
+    height: 550px;
+    width: 40%;
+    float: left;
+    display: inline-block;
+    overflow: scroll;
+}
+
+#message-main {
+    border-width: 2px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#message-side .message-friend {
+    background-color:#eee;
+    padding-bottom:30px;
+    padding-top: 7px;
+    padding-left:7px;
+}
+
+#message-field{
+    height: 40%;
+    margin-bottom: 10px;
+}
+
+#message-main .past-messages{
+    background-color:#eee;
+    padding-bottom:7px;
+    padding-top: 7px;
+    padding-left:15px;
+    border-radius:15px;
+    width: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+#message-main .past-messages-2{
+    background-color:#eee;
+    padding-bottom:7px;
+    padding-top: 7px;
+    padding-left:15px;
+    border-radius:15px;
+    width: 60%;
+    float: left;
+    margin-bottom: 20px;
+}
+
 h3 {
     font-size: 35px;
     position: absolute;
