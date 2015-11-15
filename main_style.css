@@ -132,6 +132,11 @@ ul {
     margin-top: 5px;
 }
 
+#username-field{
+    margin-left: 40%;
+    margin-right: -60%;
+}
+
 h3 {
     font-size: 35px;
     position: absolute;
