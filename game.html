@@ -13,7 +13,7 @@
 
 <script>
 	var a = "<a id=\"click\" onclick=\"move()\" href=\"#\">Click here to continue the mission.</a>";
-	var input = "<input id=\"input\" type=\"text\" /><br />"
+	var input = "<input id=\"input\" type=\"text\" onkeydown=\"if (event.keyCode == 13) document.getElementById('click').click()\"/><br />"
 	var count = 0;
 	
 	function move() {
@@ -65,7 +65,7 @@
 		}
 		else if(count == 4) {
 			if(document.getElementById("input").value == "spy.duck()" || document.getElementById("input").value == "\"spy.duck()\"") {
-				var s = "<p id=\"main\">We can't lose him. Time to use camouflage! Type \"color: gray\" to blend in with the background.</p>";
+				var s = "<p id=\"main\">We can't lose him. Time to use camouflage! Type \"color=gray\" to blend in with the background.</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.top = "300px";
 				document.getElementById("enemy").style.top = "-50px";
@@ -77,42 +77,53 @@
 			}
 		}
 		else if(count == 5) {
-			if(document.getElementById("input").value == "color: gray" || document.getElementById("input").value == "\"color: gray\"") {
-				var s = "<p id=\"main\">You need to shrink to get into the mainframe. Type \"height: 100\" to shrink!</p>";
+			if(document.getElementById("input").value == "color=gray" || document.getElementById("input").value == "\"color=gray\"") {
+				var s = "<p id=\"main\">You need to shrink to get into the mainframe. Type \"height=100\" to shrink!</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spydiv").innerHTML = "<img id=\"spy\" src=\"img/spy-camo.png\">";
 				document.getElementById("spy").style.top = "300px";
 				document.getElementById("spy").style.left = "750px";
-				document.getElementById("enemy").style.left = "2000px";
+				document.getElementById("enemy").style.left = "-2000px";
 				count = count + 1;
 			}
 			else {
-				document.getElementById("main").innerHTML = "Careful - type \"color: gray\" to move on.";
+				document.getElementById("main").innerHTML = "Careful - type \"color=gray\" to move on.";
 				count = 5;
 			}
 		}
 		else if(count == 6) {
-			if(document.getElementById("input").value == "height: 100" || document.getElementById("input").value == "\"height: 100\"") {
+			if(document.getElementById("input").value == "height=100" || document.getElementById("input").value == "\"height=100\"") {
 				var s = "<p id=\"main\">I see the mainframe! Type \"left: 10000\" to get in!</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.height = "100px";
 				count = count + 1;
 			}
 			else {
-				document.getElementById("main").innerHTML = "Careful - type \"height: 100\" to move on.";
+				document.getElementById("main").innerHTML = "Careful - type \"height=100\" to move on.";
 				count = 6;
 			}
 		}
 		else if(count == 7) {
-			if(document.getElementById("input").value == "left: 10000" || document.getElementById("input").value == "\"left: 10000\"") {
-				var s = "<p id=\"main\">I see the mainframe! Type \"right: \" to get in!</p>";
-				document.getElementById("blurb").innerHTML = s + input + a;
-				document.getElementById("spy").style.left = "10000px";
-				document.body.style.backgroundImage = "url('img/binary.jpg')";
+			if(document.getElementById("input").value == "left=10000" || document.getElementById("input").value == "\"left=10000\"") {
+				var s = "<p id=\"main\">Congratulations! You avoided the guard and hacked the mainframe!</p>";
+				a = "<a id=\"click\" onclick=\"move()\" href=\"#\">Click here to finish the mission.</a>";
+				document.getElementById("blurb").innerHTML = s + a;
+				document.getElementById("spy").style.left = "-10000px";
+				document.getElementById("title").innerHTML = "";
+				var title = document.getElementById("title1");
+				title.style.left = "0";
+				document.body.style.backgroundImage = "none";
+				document.body.style.backgroundColor = "#ffffff";
+				document.getElementById("name").style.left = "115px";
+				var blurb = document.getElementById("blurb");
+				blurb.style.color = "black";
+				click.style.color = "black";
+				blurb.style.left = "500px";
+				blurb.style.top = "250px";
 				count = count + 1;
 			}
 			else {
-				document.getElementById("main").innerHTML = "Careful - type \"left: 10000\" to move on.";
+				document.getElementById("main").innerHTML = "Careful - type \"left=10000\" to move on.";
 				count = 7;
 			}
 		}
@@ -123,6 +134,9 @@
 	<div id="title">
 		<a id="logo" href="index.html"><img src="img/logo.png" height="100px" /><span id="h2">Coding Connection</span></a>
 	</div>
+	<div id="title1">
+		<a id="logo1" href="index.html"><img src="img/logo.png" height="100px" /><h2 id="name">Coding Connection</h2></a>
+	</div>
 	<div id="spydiv"><img id="spy" src="img/spy.png"></div>
 	<div id="enemydiv"><img id="enemy" src="img/enemy.png"></div>
 	<div id="blurb">
@@ -130,5 +144,4 @@
 		<a id="click" onclick="move()" href="#">Click here to continue the mission.</a>
 	</div>
 </body>
-
 </html>
