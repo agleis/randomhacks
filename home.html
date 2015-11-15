@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	  <title>Coding Connection</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel='stylesheet' href='css/style.css'>
+	  <link rel="icon" type="image/ico" href="logo.ico">
+	  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div id="title">
+		<a id="logo" href="home.html"><img src="img/logo.png" height="100px" /><h2>Coding Connection</h2></a>
+		<ul class="nav-links">
+	  <li><a href="home.html">Home</a></li>
+      <li><a href="why.html">Why CS</a></li>
+      <li><a href="about.html"> About Cornell GWC</a></li>
+      <li><a href="media.html">The Buzz</a></li>
+      <li><a href="login.html">Log In</a></li>
+		</ul>
+	</div>
+	<div id="body">
+		<div id="left-sidebar">
+			<ul>
+				<li id="sidebar-title">
+					<h1>Jump In</h1>
+				</li>
+				<li>
+					<a href="http://www.code.org"><img src="https://code.org/images/logo.png"></a>
+				</li>
+				<li>
+					<a href="http://www.codeacademy.com"><img src="https://cdn-production.codecademy.com/assets/logo/logo--dark-blue-ac069c03cf75e3cb300995028104f92e.svg" width="200px"></a>
+				</li>
+				<li>
+					<a href="http://scratch.mit.edu"><img src="https://scratch.mit.edu/images/logo_sm.png" width="150px"></a>
+				</li>
+				<li>
+					<a href="https://www.khanacademy.org/computing/computer-programming"><img src="https://d3q6qq2zt8nhwv.cloudfront.net/platform/ad4b22b3481f4f0fa379bbde3f82c9bb.png" width="200px"></a>
+				</li>
+			</ul>
+		</div>
+		<div id="slideshow-title">
+			<h1>Why do YOU code?</h1>
+		</div>
+		<div id="slideshow">
+			<div id="img1">
+				<img src="img/img1.png" width="600px" height="500px">
+			</div>
+			<div id="img2">
+				<img src="img/img2.jpg" width="600px" height="500px">
+			</div>
+			<div id="img3">
+				<img src="img\img3.jpg" width="600px" height="500px">
+			</div>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<p>Copyright 2015, Coding Connectors Inc.</p>
+	</footer>
+</body>
+
+
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	},  3000);
+</script>
+
+</html>

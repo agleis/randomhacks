@@ -16,16 +16,13 @@ b{
     color:#275957;
 }
 
-.post{
+.post {
     margin-bottom:20px;
+    vertical-align: middle;
 }
 
 .container{
     padding: 5px 35px;
-}
-
-#message-field{
-    margin-top:25px;
 }
 
 #title {
@@ -80,6 +77,11 @@ a, a:link, a:visited, a:active, a:hover{
 ul {
     list-style: none;
 }
+
+table {
+    text-align: center;
+}
+
 #main_feed li, #user_info li{
     padding: 2px;
     margin: 2px;
@@ -105,7 +107,7 @@ ul {
     height: 100%;
 }
 
-#user_feed .post, #main_feed .post{
+#user_feed .post, #main_feed .post, #groupActivity .post{
     margin-bottom: 40px;
     
 }
@@ -150,18 +152,11 @@ ul {
 #user_info .info_section, #main_side .info_section{
     width: 100%;
     border-top-style: solid;
-    border-color:#85b7b5;
     border-top-width: 1px;
-    margin: 10px 10px;
 }
 
 #user_info .info_section h2, #main_side .info_section h2{
     margin-top: 5px;
-}
-
-
-#groupActivity h2{
-    padding-bottom:25px;
 }
 
 #yourGroups {
@@ -169,9 +164,9 @@ ul {
     float: left;
     margin-left: 20px;
     margin-top: 50px;
-    width: 23%;
+    width: 25%;
     height: 100%;
-    padding:10px 5px;
+    border: none;
 }
 
 #groupActivity {
@@ -181,11 +176,11 @@ ul {
     margin-top: 50px;
     width: 70%;
     height: 100%;
-    padding:10px 10px;
 }
 
-#groupActivity ul li {
-    padding:15px;
+#yourGroups ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #username-field {
@@ -210,7 +205,7 @@ footer {
     background-color: #39a39e;
     width: 100%;
     color: white;
-    height:100px;
+    height:50px;
     padding-top:15px;
 }
 
@@ -237,12 +232,6 @@ h1#uname{
 #user_feed{
     padding-top:45px;
 }
-
-#yourGroups ul li{
-    padding-top:10px;
-}
-
-
 
 * {
   margin: 0;
