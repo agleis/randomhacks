@@ -1,10 +1,27 @@
 body {
 	margin: 0;
+    color:#777;
     font-family: 'Lato', sans-serif;	
     height: 100%;
 }
 html{
     height: 100%;
+}
+
+h1, h2, h3{
+    color: #39a39e;
+}
+
+b{
+    color:#275957;
+}
+
+.post{
+    margin-bottom:20px;
+}
+
+.container{
+    padding: 5px 35px;
 }
 
 #title {
@@ -53,46 +70,164 @@ ul.nav-links li:hover{
 
 a, a:link, a:visited, a:active, a:hover{
     text-decoration: none;
-    color:inherit;
+    color:#39a39e;
 }
 
 ul {
     list-style: none;
 }
+#main_feed li, #user_info li{
+    padding: 2px;
+    margin: 2px;
+}
 
-#user_feed{
-    border-style: solid;
+#main_feed{
+    
     border-width: 2px;
     float: right;
-    margin-top: 50px;
     margin-right: 20px;
+    margin-top: 50px;
+    width: 75%;
+    height: 100%;
+}
+
+#user_feed{
+    
+    border-width: 2px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -200px;
     width: 65%;
     height: 100%;
 }
 
-#user_feed .post{
+#user_feed .post, #main_feed .post{
     margin-bottom: 40px;
-    border-top-style: solid;
-    border-top-width: 1px;
+    
 }
 
 #nameContainer{
     float: right;
-    margin-right: 50px;
+    margin-right: 100px;
     width: 50%;
     display: inline-block;
 }
 
-#profileAvatar{
-    width: 35%;
-    margin: 0 0;
+#nameContainer h1{
+    font-size: 80px;
+}
+
+.profileAvatar{
+    width: 30%;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+.profileAvatar img{
+    width: 100%;
+    max-height: 100%;
+    margin: auto;
     padding: 0 0;
     display: inline-block;
 }
 
-#profileAvatar a{
-    margin: 0px;
-    height: 50px;
+#user_info{
+    height: 100%;
+    width: 30%;
     display: inline-block;
 }
 
+#main_side{
+    margin-top: 50px;
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+}
+
+#user_info .info_section, #main_side .info_section{
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+#user_info .info_section h2, #main_side .info_section h2{
+    margin-top: 5px;
+}
+
+#yourGroups {
+    display: inline-block;
+    border-style: solid;
+    border-color: #39a39e;
+    border-width: 2px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px;
+    width: 25%;
+    height: 100%;
+}
+
+#groupActivity {
+    display: inline-block;
+    border-style: solid;
+    border-color: #39a39e;
+    border-width: 2px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 50px;
+    width: 70%;
+    height: 100%;
+}
+
+#groupActivity ul li {
+    padding:15px;
+}
+
+#username-field {
+    margin-left: 40%;
+    margin-right: -60%;
+}
+
+h3 {
+    font-size: 35px;
+    position: absolute;
+    left: 115px;
+    top: 0;
+    color: white;
+    margin-top: 0px;
+}
+
+
+footer {
+    display:block;
+    clear:both;
+    bottom:0;
+    text-align: center;
+    background-color: #39a39e;
+    width: 100%;
+    color: white;
+    height:100px;
+    padding-top:15px;
+}
+
+#main_feed{
+    overflow:auto;
+}
+
+a, a:active, a:link, a:visited{
+    color:#7da9a7;
+}
+
+h1#uname{
+    padding-bottom:50px;
+}
+
+#main_feed .post, #user_feed .post{
+    background-color:#eee;
+    padding-bottom:80px;
+    padding-top: 7px;
+    padding-left:7px;
+    border-radius:15px;
+}
+
+#user_feed{
+    padding-top:45px;
+}
