@@ -204,7 +204,7 @@ footer {
     background-color: #39a39e;
     width: 100%;
     color: white;
-    height:100px;
+    height:50px;
     padding-top:15px;
 }
 
@@ -230,4 +230,26 @@ h1#uname{
 
 #user_feed{
     padding-top:45px;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 50px; 
+}
+.site-footer {
+  background-color: #39a39e;
 }
