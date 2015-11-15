@@ -191,12 +191,15 @@ h3 {
 
 
 footer {
-    position:absolute;
+    display:block;
+    clear:both;
     bottom:0;
     text-align: center;
     background-color: #39a39e;
     width: 100%;
     color: white;
+    height:100px;
+    padding-top:15px;
 }
 
 #main_feed{
@@ -207,10 +210,18 @@ a, a:active, a:link, a:visited{
     color:#7da9a7;
 }
 
-#main_feed .post{
+h1#uname{
+    padding-bottom:50px;
+}
+
+#main_feed .post, #user_feed .post{
     background-color:#ddd;
     padding-bottom:80px;
     padding-top: 7px;
     padding-left:7px;
     border-radius:15px;
+}
+
+#user_feed{
+    padding-top:45px;
 }
