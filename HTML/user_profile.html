@@ -10,11 +10,11 @@
         <div id="title">
 			<a href="index.html"><img src="../img/logo.png" height="60px" /></a>
 			<ul class="nav-links">
-				<li><a href="index.html">Home</a></li>
-               	<li><a href="why.html">Why CS</a></li>
-                <li><a href="about.html"> About Cornell GWC</a></li>
-               	<li><a href="media.html">In The Media</a></li>
-                <li><a href="login.html">Log In</a></li>
+				<li><a href="main_feed.html">Home</a></li>
+               	<li><a href="why.html">Friends</a></li>
+                <li><a href="about.html">Events</a></li>
+               	<li><a href="media.html">My Profile</a></li>
+                <li><a href="login.html">Log Out</a></li>
             </ul>
 		</div>
 
@@ -22,11 +22,11 @@
             <h1>User Name</h1>
         </div>
 
-		<div id = "profileAvatar">
-			<img src="../img/logo.png" height = "200"/>
-		</div>
+        <div class = "profileAvatar">
+			<img src="../img/avatar.png"/>
+        	<button type="button" onclick="location.href='user_edit.html'">Edit</button>
+        </div>
 
-        
         <div id= "user_feed">
             <div class = "post">
             	Test Post1
@@ -43,31 +43,29 @@
         </div>
 
         <div id="user_info">
-            <img scr="http://www.sukhchainhomoeo.com/admin/News_uploded_image/1427706427female.png"
-                 alt=user width=300>
-                <p>Coding Connectors</p>
-                <h2>About Me</h2>
-                <p>I am ..... I am intrested in ....</p>
+        	<div class = "info_section">
+				<h2>Coding Connectors</h2>
+        	</div>
+             <div class = "info_section">
+				<h2>About Me</h2>
+				<p>I am ..... I am intrested in ....</p>
+        	</div>
+        	<div class = "info_section">
+        		<h2>My Skills</h2>
+            	<ul>
+                	<li>Python</li>
+               		<li>HTML</li>
+            	</ul>
+        	</div>   
+        	<div class = "info_section">
+				<h2>Badges</h2>
+				<p>Code Academy</p>
+        	</div>      
+                
+        </div>
         </div>
         
-        <div id="Activity">
-            <h1>Activity</h1>
-            
-        </div>
         
-        <div id="Skill">
-            <h1>My Skills</h1>
-            <ul>
-                <li>Python</li>
-                <li>HTML</li>
-            </ul>
-            
-            
-        </div>
-        
-        <div>
-            <button type="button" onclick="location.href='user_edit.html'">Edit</button>
-        </div>
       
     </body>
 </html>
