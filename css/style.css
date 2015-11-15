@@ -98,6 +98,7 @@ ul {
 }
 
 #slideshow { 
+	display: block;
     margin: 0 auto; 
     position: absolute;
 	left: 500px;
@@ -191,9 +192,9 @@ h2 {
 }
 
 footer {
-	   display:block;
+	display:block;
     clear:both;
-    bottom:0;
+    bottom: 0;
     text-align: center;
     background-color: #39a39e;
     width: 100%;
