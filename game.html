@@ -18,30 +18,33 @@
 	
 	function move() {
 		if(count == 0) {
-			var s = "<p id=\"main\">First, you need to jump down to start the mission. Type \"spy.jump()\" to hop down to the ground.</p>";
+			var s = "<p id=\"main\">First, you need to jump down to start the mission. Type \"spy.jump(-100)\" to hop down to the ground.</p>";
 			document.getElementById("blurb").innerHTML = s + input + a;
+				document.getElementById("input").focus();
 			count = count + 1;
 		}
 		else if(count == 1) {
-			if(document.getElementById("input").value == "spy.jump()" || document.getElementById("input").value == "\"spy.jump()\"") { 
+			if(document.getElementById("input").value == "spy.jump(-100)" || document.getElementById("input").value == "\"spy.jump(-100)\"") { 
 				var s = "<p id=\"main\">Careful! You need to dodge the mainframe guards! Type \"spy.dodge()\" to avoid them.</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.top = "200px";
 				document.getElementById("enemy").style.left = "10px";
+				document.getElementById("input").focus();
 				count = count + 1;
 			}
 			else {
-				document.getElementById("main").innerHTML = "Careful - type \"spy.jump()\" to move on.";
+				document.getElementById("main").innerHTML = "Careful - type \"spy.jump(-100)\" to move on.";
 				count = 1;
 			}
 		}
 		else if(count == 2) {
 			if(document.getElementById("input").value == "spy.dodge()" || document.getElementById("input").value == "\"spy.dodge()\"") {
-				var s = "<p id=\"main\">They're still after you! Type \"spy.jump()\" to get away!</p>";
+				var s = "<p id=\"main\">They're still after you! Type \"spy.jump(100)\" to get away!</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.left = "700px";
 				document.getElementById("enemy").style.top = "250px";
 				document.getElementById("enemy").style.height = "350px";
+				document.getElementById("input").focus();
 				count = count + 1;
 			}
 			else {
@@ -50,16 +53,17 @@
 			}
 		}
 		else if(count == 3) {
-			if(document.getElementById("input").value == "spy.jump()" || document.getElementById("input").value == "\"spy.jump()\"") {
+			if(document.getElementById("input").value == "spy.jump(100)" || document.getElementById("input").value == "\"spy.jump(100)\"") {
 				var s = "<p id=\"main\">Oh no, duck! Type \"spy.duck()\".</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.top = "-50px";
 				document.getElementById("spy").style.left = "750px";
 				document.getElementById("enemy").style.left = "550px";
+				document.getElementById("input").focus();
 				count = count + 1;
 			}
 			else {
-				document.getElementById("main").innerHTML = "Careful - type \"spy.jump()\" to move on.";
+				document.getElementById("main").innerHTML = "Careful - type \"spy.jump(100)\" to move on.";
 				count = 3;
 			}
 		}
@@ -69,6 +73,7 @@
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.top = "300px";
 				document.getElementById("enemy").style.top = "-50px";
+				document.getElementById("input").focus();
 				count = count + 1;
 			}
 			else {
@@ -84,6 +89,7 @@
 				document.getElementById("spy").style.top = "300px";
 				document.getElementById("spy").style.left = "750px";
 				document.getElementById("enemy").style.left = "-2000px";
+				document.getElementById("input").focus();
 				count = count + 1;
 			}
 			else {
@@ -93,9 +99,10 @@
 		}
 		else if(count == 6) {
 			if(document.getElementById("input").value == "height=100" || document.getElementById("input").value == "\"height=100\"") {
-				var s = "<p id=\"main\">I see the mainframe! Type \"left: 10000\" to get in!</p>";
+				var s = "<p id=\"main\">I see the mainframe! Type \"left=1000\" to get in!</p>";
 				document.getElementById("blurb").innerHTML = s + input + a;
 				document.getElementById("spy").style.height = "100px";
+				document.getElementById("input").focus();
 				count = count + 1;
 			}
 			else {
@@ -104,12 +111,12 @@
 			}
 		}
 		else if(count == 7) {
-			if(document.getElementById("input").value == "left=10000" || document.getElementById("input").value == "\"left=10000\"") {
+			if(document.getElementById("input").value == "left=1000" || document.getElementById("input").value == "\"left=1000\"") {
 				var s = "<p id=\"main\">Congratulations! You avoided the guard and hacked the mainframe!</p>";
-				a = "<a id=\"click\" onclick=\"move()\" href=\"#\">Click here to finish the mission.</a>";
-				document.getElementById("blurb").innerHTML = s + a;
+				a = "<a id=\"click\" onclick=\"move()\" href=\"index.html\" style=\"color:black\">Click here to continue the mission with Coding Connection.</a>";
 				document.getElementById("spy").style.left = "-10000px";
 				document.getElementById("title").innerHTML = "";
+				document.getElementById("input").focus();
 				var title = document.getElementById("title1");
 				title.style.left = "0";
 				document.body.style.backgroundImage = "none";
@@ -117,13 +124,15 @@
 				document.getElementById("name").style.left = "115px";
 				var blurb = document.getElementById("blurb");
 				blurb.style.color = "black";
-				click.style.color = "black";
 				blurb.style.left = "500px";
-				blurb.style.top = "250px";
+				blurb.style.top = "150px";
+				var str = "<div id=\"code\"><p>Here is the program you just wrote!</p><p>spy.jump(-100)</p><p>spy.dodge()</p><p>spy.jump(100)</p><p>spy.duck()</p><p>#spy {color: gray}</p><p>#spy {height: 100}</p><p>#spy {left: -1000}</p></div>";
+				blurb.innerHTML = s + str + a;
+				blurb.style.border = "1px solid black";
 				count = count + 1;
 			}
 			else {
-				document.getElementById("main").innerHTML = "Careful - type \"left=10000\" to move on.";
+				document.getElementById("main").innerHTML = "Careful - type \"left=1000\" to move on.";
 				count = 7;
 			}
 		}
@@ -133,6 +142,7 @@
 <body>
 	<div id="title">
 		<a id="logo" href="index.html"><img src="img/logo.png" height="100px" /><span id="h2">Coding Connection</span></a>
+		<a id="skiplink" href="index.html"><p>Skip to Home</p></a>
 	</div>
 	<div id="title1">
 		<a id="logo1" href="index.html"><img src="img/logo.png" height="100px" /><h2 id="name">Coding Connection</h2></a>

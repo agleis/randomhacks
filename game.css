@@ -73,6 +73,11 @@ a {
 	width: 350px;
 	font-family: Courier;
 	text-align: center;
+	
+	-webkit-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	-moz-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	-o-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
 }
 
 #blurb #main {
@@ -108,9 +113,13 @@ a {
 	margin: 0;
 }
 
-button {
-	background: none;
-	border: 0;
-	padding: 0;
-	margin: 0;
+#code {
+	line-height: 0.5;
+}
+
+#skiplink {
+	float: right;
+	margin-top: 40px;
+	margin-right: 20px;
+	font-size: 24px;
 }
