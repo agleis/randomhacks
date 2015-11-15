@@ -238,6 +238,12 @@ h1#uname{
     padding-top:45px;
 }
 
+#yourGroups ul li{
+    padding-top:10px;
+}
+
+
+
 * {
   margin: 0;
 }
