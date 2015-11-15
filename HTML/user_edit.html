@@ -3,16 +3,33 @@
     <head>
         <meta charset="utf-8">
         <title>Edit Profile</title>
-        <link rel="Stylesheet" type = "text/css" href = "css/stylesheet.css">
-        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="Stylesheet" type = "text/css" href = "../main_style.css">
     </head>
     <body>
       <div>
+        <div id="title">
+      <a href="..\index.html"><img src="../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
+      <ul class="nav-links">
+        <li><a href="main_feed.html">Home</a></li>
+                <li><a href="message.html">Messages</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="groups.html">Groups</a></li>
+                <li><a href="user_profile.html">My Profile</a></li>
+                <li><a href="..\index.html">Log Out</a></li>
+            </ul>
+        </div>
+      </div>
+      <br>
+    <br>
+    <br>
+      <div>
+        <center>
         <form>
-        First name:<br>
+        <font size="6">First name:</font><br>
         <input type="text" name="firstname">
         <br>
-        Last name:<br>
+        <br>
+        <font size="6">Last name:</font><br>
         <input type="text" name="lastname">
         </form>
         
@@ -22,10 +39,15 @@
         About me!
         </textarea>
         
+        <h2>Skills</h2>
+        <textarea name="message" rows="10" cols="30">
+        List skills here.
+        </textarea>
+        <br>
         <button type="button" onclick="location.href='user_profile.html'">Cancel</button>
         <button type="button" onclick=>Submit</button>
 
-        
+        </center>
       </div>
     </body>
 </html>
