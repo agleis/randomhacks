@@ -16,7 +16,7 @@ b{
     color:#275957;
 }
 
-.post{
+.post {
     margin-bottom:20px;
 }
 
@@ -106,7 +106,7 @@ table {
     height: 100%;
 }
 
-#user_feed .post, #main_feed .post{
+#user_feed .post, #main_feed .post, #groupActivity .post{
     margin-bottom: 40px;
     
 }
@@ -160,9 +160,6 @@ table {
 
 #yourGroups {
     display: inline-block;
-    border-style: solid;
-    border-color: #39a39e;
-    border-width: 2px;
     float: left;
     margin-left: 20px;
     margin-top: 50px;
@@ -172,9 +169,6 @@ table {
 
 #groupActivity {
     display: inline-block;
-    border-style: solid;
-    border-color: #39a39e;
-    border-width: 2px;
     float: right;
     margin-right: 20px;
     margin-top: 50px;
@@ -182,8 +176,9 @@ table {
     height: 100%;
 }
 
-#groupActivity ul li {
-    padding:15px;
+#yourGroups ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #username-field {
@@ -224,7 +219,7 @@ h1#uname{
     padding-bottom:50px;
 }
 
-#main_feed .post, #user_feed .post{
+#main_feed .post, #user_feed .post, #groupActivity .post{
     background-color:#eee;
     padding-bottom:80px;
     padding-top: 7px;
