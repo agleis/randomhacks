@@ -121,6 +121,17 @@ ul {
 	margin-top: 10px;
 }
 
+#video-header{
+	left: 300px;
+	width: 60%;
+}
+
+#videos{
+	position: absolute;
+	left: 300px;
+	width: 60%;
+}
+
 h1 {
 	color: #39a39e;
 }

@@ -77,6 +77,15 @@ ul {
 	text-align: none;
 }
 
+#video-header{
+	text-align: center;
+}
+
+#videos{
+	float: right;
+	width: 60%;
+}
+
 h1 {
 	color: #39a39e;
 }
@@ -121,3 +130,4 @@ a, a:link, a:visited, a:active, a:hover{
 	text-decoration: none;
 	color:inherit;
 }
+
