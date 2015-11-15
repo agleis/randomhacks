@@ -1,10 +1,15 @@
 body {
 	margin: 0;
+    color:#000;
     font-family: 'Lato', sans-serif;	
     height: 100%;
 }
 html{
     height: 100%;
+}
+
+h1, h2, h3{
+    color: #39a39e;
 }
 
 
@@ -59,6 +64,10 @@ a, a:link, a:visited, a:active, a:hover{
 
 ul {
     list-style: none;
+}
+#main_feed li, #user_info li{
+    padding: 2px;
+    margin: 2px;
 }
 
 #main_feed{
@@ -119,13 +128,20 @@ ul {
     display: inline-block;
 }
 
-#user_info .info_section{
+#main_side{
+    margin-top: 50px;
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+}
+
+#user_info .info_section, #main_side .info_section{
     width: 100%;
     border-top-style: solid;
     border-top-width: 1px;
 }
 
-#user_info .info_section h2{
+#user_info .info_section h2, #main_side .info_section h2{
     margin-top: 5px;
 }
 
@@ -149,6 +165,11 @@ ul {
     margin-top: 50px;
     width: 70%;
     height: 100%;
+}
+
+#username-field {
+    margin-left: 40%;
+    margin-right: -60%;
 }
 
 h3 {
