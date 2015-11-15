@@ -112,12 +112,12 @@ ul {
 
 #sidebar-title {
 	color: #39a39e;
-	text-decoration: underline;
+	border-bottom: 1px solid #39a39e;
 }
 
 #slideshow-title {
 	position: absolute;
-	left: 550px;
+	left: 560px;
 	margin-top: 10px;
 }
 
@@ -134,6 +134,19 @@ ul {
 
 h1 {
 	color: #39a39e;
+}
+
+h2 {
+	font-size: px;;
+	position: absolute;
+	left: 115px;
+	top: 0;
+	color: white;
+	margin-top: 0px;
+}
+
+#logo {
+	width: 20vw;
 }
 
 footer {
