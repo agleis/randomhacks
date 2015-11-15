@@ -63,7 +63,9 @@ a, a:link, a:visited, a:active, a:hover{
 #left-sidebar {
 	float: left;
 	left: 0px;
-	width: 300px;
+	width: 23vw;
+	margin-left: 3.7vw;
+	margin-right: 2.96vw;
 }
 
 ul {
@@ -83,7 +85,7 @@ ul {
 #slideshow { 
     margin: 0 auto; 
     position: absolute;
-	left: 400px;
+	left: 500px;
 	top: 200px;
     width: 600px; 
     height: 500px; 
@@ -117,7 +119,7 @@ ul {
 
 #slideshow-title {
 	position: absolute;
-	left: 560px;
+	left: 660px;
 	margin-top: 10px;
 }
 
@@ -140,7 +142,7 @@ h1 {
 }
 
 h2 {
-	font-size: px;;
+	font-size: 40px;
 	position: absolute;
 	left: 115px;
 	top: 0;
