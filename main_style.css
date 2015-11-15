@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-    color:#000;
+    color:#777;
     font-family: 'Lato', sans-serif;	
     height: 100%;
 }
@@ -12,6 +12,17 @@ h1, h2, h3{
     color: #39a39e;
 }
 
+b{
+    color:#275957;
+}
+
+.post{
+    margin-bottom:20px;
+}
+
+.container{
+    padding: 5px 35px;
+}
 
 #title {
     line-height: 60px;
@@ -71,8 +82,7 @@ ul {
 }
 
 #main_feed{
-    display: inline-block;
-    border-style: solid;
+    
     border-width: 2px;
     float: right;
     margin-right: 20px;
@@ -82,8 +92,7 @@ ul {
 }
 
 #user_feed{
-    display: inline-block;
-    border-style: solid;
+    
     border-width: 2px;
     float: right;
     margin-right: 20px;
@@ -94,8 +103,7 @@ ul {
 
 #user_feed .post, #main_feed .post{
     margin-bottom: 40px;
-    border-top-style: solid;
-    border-top-width: 1px;
+    
 }
 
 #nameContainer{
@@ -181,6 +189,7 @@ h3 {
     margin-top: 0px;
 }
 
+<<<<<<< Updated upstream
 footer {
     position:absolute;
     bottom:0;
@@ -188,4 +197,20 @@ footer {
     background-color: #39a39e;
     width: 100%;
     color: white;
+=======
+#main_feed{
+    overflow:auto;
+}
+
+a, a:active, a:link, a:visited{
+    color:#7da9a7;
+}
+
+#main_feed .post{
+    background-color:#ddd;
+    padding-bottom:80px;
+    padding-top: 7px;
+    padding-left:7px;
+    border-radius:15px;
+>>>>>>> Stashed changes
 }
