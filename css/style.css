@@ -9,6 +9,10 @@ body {
 	text-align: center;
 }
 
+@media(max-width:920px){
+	
+}
+
 ul.nav-links li:first-child{
 	margin-left:30px;
 }
