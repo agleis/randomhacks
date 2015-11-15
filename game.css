@@ -70,7 +70,14 @@ a {
 	position: absolute;
 	top: 400px;
 	left: 300px;
-	width: 300px;
+	width: 350px;
+	font-family: Courier;
+	text-align: center;
+	
+	-webkit-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	-moz-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	-o-transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
+	transition: left 2000ms ease, top 1000ms ease, height 1000ms ease;
 }
 
 #blurb #main {
@@ -79,4 +86,40 @@ a {
 
 #blurb #click {
 	padding-left: 10px;
+}
+
+#title1 a img {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#name {
+	font-size: 40px;
+	position: absolute;
+	left: -500px;
+	top: 0px;
+	color: white;
+	margin-top: 0px;
+}
+
+#title1 {
+	line-height: 100px;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	left: 3000px;
+	background-color: #39a39e;
+	margin: 0;
+}
+
+#code {
+	line-height: 0.5;
+}
+
+#skiplink {
+	float: right;
+	margin-top: 40px;
+	margin-right: 20px;
+	font-size: 24px;
 }

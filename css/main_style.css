@@ -24,6 +24,10 @@ b{
     padding: 5px 35px;
 }
 
+#message-field{
+    margin-top:25px;
+}
+
 #title {
     line-height: 60px;
     width:100%;
@@ -146,35 +150,41 @@ ul {
 #user_info .info_section, #main_side .info_section{
     width: 100%;
     border-top-style: solid;
+    border-color:#85b7b5;
     border-top-width: 1px;
+    margin: 10px 10px;
 }
 
 #user_info .info_section h2, #main_side .info_section h2{
     margin-top: 5px;
 }
 
+
+#groupActivity h2{
+    padding-bottom:25px;
+}
+
 #yourGroups {
     display: inline-block;
     border-style: solid;
-    border-color: #39a39e;
+    border-color: #85b7b5;
     border-width: 2px;
     float: left;
     margin-left: 20px;
     margin-top: 50px;
-    width: 25%;
+    width: 20%;
     height: 100%;
+    padding:10px 10px;
 }
 
 #groupActivity {
     display: inline-block;
-    border-style: solid;
-    border-color: #39a39e;
-    border-width: 2px;
     float: right;
     margin-right: 20px;
     margin-top: 50px;
     width: 70%;
     height: 100%;
+    padding:10px 10px;
 }
 
 #groupActivity ul li {
@@ -219,7 +229,7 @@ h1#uname{
     padding-bottom:50px;
 }
 
-#main_feed .post, #user_feed .post{
+#main_feed .post, #user_feed .post, #groupActivity .post{
     background-color:#eee;
     padding-bottom:80px;
     padding-top: 7px;
@@ -229,4 +239,26 @@ h1#uname{
 
 #user_feed{
     padding-top:45px;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 50px; 
+}
+.site-footer {
+  background-color: #39a39e;
 }
