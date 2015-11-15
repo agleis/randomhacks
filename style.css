@@ -1,17 +1,15 @@
 body {
 	margin: 0;
 	font-family: sans-serif;
-	width: 100%;
     font-family: 'Lato', sans-serif;
 }
 
 #body {
-	text-align: center;
 }
 
 #title {
 	line-height: 100px;
-	width:100%;
+	width: 100%;
 	height: 100px;
 	background-color: #39a39e;
 	margin: 0;
@@ -76,6 +74,7 @@ ul {
 	position: absolute;
 	left: 550px;
 	margin-top: 10px;
+	text-align: none;
 }
 
 h1 {
