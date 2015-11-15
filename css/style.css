@@ -122,14 +122,17 @@ ul {
 }
 
 #video-header{
-	left: 300px;
-	width: 60%;
+	position: absolute;
+	left: 550px;
+	margin-top: 10px;
 }
 
 #videos{
-	position: absolute;
-	left: 300px;
-	width: 60%;
+	margin: 0 auto; 
+    position: absolute;
+	left: 400px;
+	top: 200px;
+    width: 600px; 
 }
 
 h1 {
