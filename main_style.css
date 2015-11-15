@@ -189,7 +189,7 @@ h3 {
     margin-top: 0px;
 }
 
-<<<<<<< Updated upstream
+
 footer {
     position:absolute;
     bottom:0;
@@ -197,7 +197,8 @@ footer {
     background-color: #39a39e;
     width: 100%;
     color: white;
-=======
+}
+
 #main_feed{
     overflow:auto;
 }
@@ -212,5 +213,4 @@ a, a:active, a:link, a:visited{
     padding-top: 7px;
     padding-left:7px;
     border-radius:15px;
->>>>>>> Stashed changes
 }
