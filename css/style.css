@@ -6,6 +6,10 @@ body {
     color:#222;
 }
 
+html {
+	height: 100%;
+}
+
 #body {
 	text-align: center;
 }
@@ -187,10 +191,35 @@ h2 {
 }
 
 footer {
-	position: absolute;
-	top: 750px;
-	text-align: center;
-	background-color: #39a39e;
-	width: 100%;
-	color: white;
+	   display:block;
+    clear:both;
+    bottom:0;
+    text-align: center;
+    background-color: #39a39e;
+    width: 100%;
+    color: white;
+    height:100px;
+    padding-top:15px;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 50px; 
+}
+.site-footer {
+  background-color: #39a39e;
 }
