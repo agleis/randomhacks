@@ -79,17 +79,20 @@ ul {
 #nameContainer{
     float: right;
     margin-right: 50px;
-    width: 60%;
+    width: 50%;
+    display: inline-block;
 }
 
 #profileAvatar{
     width: 35%;
-    margin: 0px;
-    padding: 0px;
+    margin: 0 0;
+    padding: 0 0;
+    display: inline-block;
 }
 
 #profileAvatar a{
     margin: 0px;
     height: 50px;
+    display: inline-block;
 }
 
