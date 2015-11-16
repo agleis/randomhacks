@@ -242,7 +242,9 @@ h1#uname{
     padding-top:10px;
 }
 
-
+#editform {
+	text-align: center;
+}
 
 * {
   margin: 0;
