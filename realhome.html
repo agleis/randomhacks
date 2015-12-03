@@ -17,10 +17,10 @@
 			<a href="home.html"><img src="img/logo.png" height="100px" /><h2>Coding Connection</h2></a>
 			<ul class="nav-links">
 		  <li><a href="home.html">Home</a></li>
-		  <li><a href="home.html">Why CS</a></li>
-		  <li><a href="home.html"> About Cornell GWC</a></li>
-		  <li><a href="home.html">The Buzz</a></li>
-		  <li><a href="home.html">Log In</a></li>
+		  <li><a href="why.html">Why CS</a></li>
+		  <li><a href="about.html"> About Cornell GWC</a></li>
+		  <li><a href="media.html">The Buzz</a></li>
+		  <li><a href="login.html">Log In</a></li>
 			</ul>
 		</div>
 		<div id="body">
@@ -50,14 +50,19 @@
 				</ul>
 			</div>
 			<div id="slidestuff">
-				<div id="construction-img">
-					<img src="img\construction.png">
+				<div id="slideshow-title">
+					<h1>Why do YOU code?</h1>
 				</div>
-				<div id="construction">
-					<p> We're currently in the process of constructing the best 
-					Coding Connection experience possible. In the meantime, please 
-					check out some of the links to the left to learn more about coding. 
-					Hope to see you back here soon!</p>
+				<div id="slideshow">
+					<div id="img1">
+						<img src="img/img1.png" width="600px" height="500px">
+					</div>
+					<div id="img2">
+						<img src="img/img2.jpg" width="600px" height="500px">
+					</div>
+					<div id="img3">
+						<img src="img/img3.jpg" width="600px" height="500px">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -66,3 +71,19 @@
 		<p>Copyright 2015, Coding Connectors Inc.</p>
 	</footer>
 </body>
+
+
+<script>
+	$("#slideshow > div:gt(0)").hide();
+
+	setInterval(function() { 
+	  $('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+	},  3000);
+</script>
+
+</html>

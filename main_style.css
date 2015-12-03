@@ -16,13 +16,16 @@ b{
     color:#275957;
 }
 
-.post {
+.post{
     margin-bottom:20px;
-    vertical-align: middle;
 }
 
 .container{
     padding: 5px 35px;
+}
+
+#message-field{
+    margin-top:25px;
 }
 
 #title {
@@ -77,11 +80,6 @@ a, a:link, a:visited, a:active, a:hover{
 ul {
     list-style: none;
 }
-
-table {
-    text-align: center;
-}
-
 #main_feed li, #user_info li{
     padding: 2px;
     margin: 2px;
@@ -107,7 +105,7 @@ table {
     height: 100%;
 }
 
-#user_feed .post, #main_feed .post, #groupActivity .post{
+#user_feed .post, #main_feed .post{
     margin-bottom: 40px;
     
 }
@@ -152,11 +150,18 @@ table {
 #user_info .info_section, #main_side .info_section{
     width: 100%;
     border-top-style: solid;
+    border-color:#85b7b5;
     border-top-width: 1px;
+    margin: 10px 10px;
 }
 
 #user_info .info_section h2, #main_side .info_section h2{
     margin-top: 5px;
+}
+
+
+#groupActivity h2{
+    padding-bottom:25px;
 }
 
 #yourGroups {
@@ -164,9 +169,9 @@ table {
     float: left;
     margin-left: 20px;
     margin-top: 50px;
-    width: 25%;
+    width: 23%;
     height: 100%;
-    border: none;
+    padding:10px 5px;
 }
 
 #groupActivity {
@@ -176,73 +181,16 @@ table {
     margin-top: 50px;
     width: 70%;
     height: 100%;
+    padding:10px 10px;
 }
 
-#yourGroups ul li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#username-field {
-    margin-left: 40%;
-    margin-right: -60%;
+#groupActivity ul li {
+    padding:15px;
 }
 
 #username-field {
     margin-left: 40%;
     margin-right: -60%;
-}
-
-#message-side {
-    height: 550px;
-    width: 40%;
-    float: left;
-    display: inline-block;
-    overflow: scroll;
-}
-
-#message-main {
-    border-width: 2px;
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
-    width: 55%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#message-side .message-friend {
-    background-color:#eee;
-    padding-bottom:30px;
-    padding-top: 7px;
-    padding-left:7px;
-}
-
-#message-field{
-    height: 40%;
-    margin-bottom: 10px;
-}
-
-#message-main .past-messages{
-    background-color:#eee;
-    padding-bottom:7px;
-    padding-top: 7px;
-    padding-left:15px;
-    border-radius:15px;
-    width: 60%;
-    float: right;
-    margin-bottom: 20px;
-}
-
-#message-main .past-messages-2{
-    background-color:#eee;
-    padding-bottom:7px;
-    padding-top: 7px;
-    padding-left:15px;
-    border-radius:15px;
-    width: 60%;
-    float: left;
-    margin-bottom: 20px;
 }
 
 h3 {
@@ -262,7 +210,7 @@ footer {
     background-color: #39a39e;
     width: 100%;
     color: white;
-    height:50px;
+    height:100px;
     padding-top:15px;
 }
 
@@ -280,7 +228,7 @@ h1#uname{
 
 #main_feed .post, #user_feed .post, #groupActivity .post{
     background-color:#eee;
-    padding-bottom:80px;
+    padding-bottom:20px;
     padding-top: 7px;
     padding-left:7px;
     border-radius:15px;
@@ -289,6 +237,12 @@ h1#uname{
 #user_feed{
     padding-top:45px;
 }
+
+#yourGroups ul li{
+    padding-top:10px;
+}
+
+
 
 * {
   margin: 0;

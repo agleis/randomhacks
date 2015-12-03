@@ -1,3 +1,12 @@
+#construction-img {
+	margin-top: 20px;
+}
+
+#construction {
+	margin-right: 50px;
+	margin-left: 300px;
+}
+
 body {
 	margin: 0;
 	font-family: sans-serif;
@@ -8,6 +17,7 @@ body {
 
 html {
 	height: 100%;
+	min-width: 1100px;
 }
 
 #body {
@@ -75,14 +85,6 @@ a, a:link, a:visited, a:active, a:hover{
 	margin: 0;
 }
 
-#left-sidebar {
-	float: left;
-	left: 0px;
-	width: 23vw;
-	margin-left: 3.7vw;
-	margin-right: 2.96vw;
-}
-
 ul {
 	list-style: none;
 }
@@ -97,12 +99,16 @@ ul {
 	text-transform: uppercase;
 }
 
+#slidestuff {
+	position: relative;
+}
+
 #slideshow { 
 	display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
+	margin-left: 40%;
     position: absolute;
-	left: 500px;
-	top: 200px;
+	top: 140px;
     width: 600px; 
     height: 500px; 
     padding: 10px; 
@@ -123,6 +129,11 @@ ul {
 	left: 0;
 }
 
+#left-sidebar {
+	float: left;
+	width: 250px;
+}
+
 #left-sidebar ul li {
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -135,21 +146,24 @@ ul {
 
 #slideshow-title {
 	position: absolute;
-	left: 660px;
+	top: 40px;
+	width: 600px;
+	margin: 0 auto;
+	margin-left: 40%;
 	margin-top: 10px;
 }
 
 #video-header {
-	position: absolute;
-	left: 550px;
-	margin-top: 10px;
+	margin-left: 25%;	
+    position: absolute;
+	top: 20px;
+    width: 600px; 
 }
 
 #videos {
-	margin: 0 auto; 
+	margin-left: 25%;	
     position: absolute;
-	left: 400px;
-	top: 200px;
+	top: 120px;
     width: 600px; 
 }
 
