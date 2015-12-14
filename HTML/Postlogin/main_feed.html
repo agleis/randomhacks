@@ -8,34 +8,63 @@
 		<script>
 			function initialize() {
 				Parse.initialize("Wc1q7sHJ3vbi8UQcLckBB86SnkZGeGwdxXpowDzg", "PXNmpPhmuH6UAM6cX0KRITpyjwKQ1oM2oDuasUuu");
-				pullPosts();
+				Parse.User.logIn("agleis", "coding", {
+				  success: function(user) {
+				  
+				  },
+				  error: function(user, error) {
+					alert("Error: " + error.code + " " + error.message);
+				  }
+				});
 			}
 			
 			function pullPosts() {
 				var user = Parse.User.current();
+				var relation = user.get("Posts");
+				var query = relation.query();
+				query.find({
+					success: function(list) {
+						var innerH = "";
+						var append = "";
+						var i;
+						for(i = 0; i < list.length; i++) {
+							var post = list[i];
+							innerH = document.getElementById("main_feed").innerHTML;
+							append = "<div class='post'><table width='90%' style='text-align:left;'><tr><td width='85%'><h1>"+post.get("Title")+"</h1><br /><br /><i>"+post.get("Content")+"</i><br /><br /><a href='#'><img src='../../img/email.png'></a><a href='#'><img src='../../img/facebook.png'></a><a href='#'><img src='../../img/twitter.png'></a></td><td><br /><img src="+post.get("Image")+"></td></tr></table> </div>";
+							document.getElementById("main_feed").innerHTML = innerH + append;
+						}
+					}
+				});
 				
+			}
+			
+			function logout() {
+				
+				var user = Parse.User.current();
+				user.logOut();
 			}
 		</script>
         <link rel="Stylesheet" type = "text/css" href = "../../css/main_style.css">
     </head>
     <body>
-		<script>initialize()</script>
+	  <script>initialize()</script>
+	  <script>pullPosts()</script>
       <div id="title">
       <a href="../Prelogin/home.html"><img src="../../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
       <ul class="nav-links">
         <li><a href="main_feed.html">Home</a></li>
-                <li><a href="message.html">Messages</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="groups.html">Groups</a></li>
-                <li><a href="user_profile.html">My Profile</a></li>
-                <li><a href="../Prelogin/home.html">Log Out</a></li>
-            </ul>
+		<li><a href="message.html">Messages</a></li>
+		<li><a href="events.html">Events</a></li>
+		<li><a href="groups.html">Groups</a></li>
+		<li><a href="user_profile.html">My Profile</a></li>
+		<li><a onclick="logout()" href="../Prelogin/home.html">Log Out</a></li>
+	  </ul>
     </div>
 
 
     <div class="container">
          <div id= "main_feed">
-            <div class = "post">
+            <!-- <div class = "post">
               <img src="../../img/avatar.png" height="30" width="30">
               <table width="90%" style="text-align:left;">
               <tr><td width="85%">
@@ -59,7 +88,7 @@
               </td>
               <td><iframe width="280" height="157" src="https://www.youtube.com/embed/bEcQrILxTlc" frameborder="0" allowfullscreen></iframe></td></tr>
             </table> 
-            </div>
+            </div> -->
         </div>
 
       <div id="main_side">

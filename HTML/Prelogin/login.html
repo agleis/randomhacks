@@ -17,6 +17,7 @@
 				
 				Parse.User.logIn(username, password, {
 				  success: function(user) {
+					alert(Parse.User.current().id);
 					document.location.href = '../Postlogin/main_feed.html';
 				  },
 				  error: function(user, error) {
