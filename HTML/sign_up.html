@@ -4,8 +4,43 @@
         <meta charset="utf-8">
         <title>Log In</title>
         <link rel="Stylesheet" type = "text/css" href = "../css/main_style.css">
+		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			function initialize() {
+				Parse.initialize("Wc1q7sHJ3vbi8UQcLckBB86SnkZGeGwdxXpowDzg", "PXNmpPhmuH6UAM6cX0KRITpyjwKQ1oM2oDuasUuu");
+			}
+			
+			function createUser() {
+				var name = document.getElementById("username").value;
+				var password = document.getElementById("password").value;
+				var first = document.getElementById("first").value;
+				var last = document.getElementById("last").value;
+				var age = document.getElementById("age").value;
+				var email = document.getElementById("email").value;
+				
+				var User = Parse.Object.extend("User");
+				var user = new User();
+				user.set("username", name);
+				user.set("password", password);
+				user.set("FirstName", first);
+				user.set("LastName", last);
+				user.set("Age", Number(age));
+				user.set("email", email);
+				user.signUp(null, {
+				  success: function(user) {
+					document.location.href = '../login.html';
+				  },
+				  error: function(user, error) {
+					// Show the error message somewhere and let the user try again.
+					alert("Error: " + error.code + " " + error.message);
+				  }
+				});
+			}
+		</script>
     </head>
     <body>
+	<script>initialize()</script>
 	<div class="page-wrap">
         <div id="title">
       <a href="home.html"><img src="../img/logo.png" height="60px" /></a>
@@ -24,25 +59,25 @@
             <br>
             <br>
             User name:<br>
-        <input type="text" name="username">
+        <input id="username" type="text" name="username">
         <br>
             Password:<br>
-        <input type="password" name="psw">
+        <input id="password" type="password" name="psw">
         <br>
             First Name:<br>
-        <input type="text" name="first">
+        <input id="first" type="text" name="first">
         <br>
             Last Name:<br>
-        <input type="text" name="last">
+        <input id="last" type="text" name="last">
         <br>
             Age:<br>
-        <input type="text" name="age">
+        <input id="age" type="text" name="age">
         <br>
             Email:<br>
-        <input type="text" name="email">
+        <input id="email" type="text" name="email">
         <br>
 			GWC Chapter:<br>
-		<select name="gwc-chapter">
+		<select id="gwc-chapter" name="gwc-chapter">
 			<option value="none">None</option>
 			<option value="Cornell GWC">Cornell GWC</option>
 		</select>
@@ -61,7 +96,7 @@
       
       <div>
         <center>
-        <button type="button" onclick="location.href='../login.html'">Submit</button>
+        <button type="button" onclick="createUser()">Submit</button>
         </center>
       </div>
 	  </div>

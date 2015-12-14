@@ -4,8 +4,22 @@
         <meta charset="utf-8">
         <title>Home</title>
         <link rel="Stylesheet" type = "text/css" href = "../css/main_style.css">
+		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			function initialize() {
+				Parse.initialize("Wc1q7sHJ3vbi8UQcLckBB86SnkZGeGwdxXpowDzg", "PXNmpPhmuH6UAM6cX0KRITpyjwKQ1oM2oDuasUuu");
+				pullPosts();
+			}
+			
+			function pullPosts() {
+				var user = Parse.User.current();
+				
+			}
+		</script>
     </head>
     <body>
+		<script>initialize()</script>
       <div id="title">
       <a href="..\home.html"><img src="../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
       <ul class="nav-links">
