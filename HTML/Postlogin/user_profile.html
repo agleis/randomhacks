@@ -12,6 +12,61 @@
 				Parse.initialize("Wc1q7sHJ3vbi8UQcLckBB86SnkZGeGwdxXpowDzg", "PXNmpPhmuH6UAM6cX0KRITpyjwKQ1oM2oDuasUuu");
 				pullPosts();
 			}
+			
+			function pullPosts() {
+				var user = Parse.User.current();
+				var relation = user.get("Posts");
+				var query = relation.query();
+				query.find({
+					success: function(list) {
+						var innerH = "";
+						var append = "";
+						var i;
+						for(i = 0; i < list.length; i++) {
+							var post = list[i];
+							innerH = document.getElementById("user_feed").innerHTML;
+							var date = JSON.stringify(post.get("createdAt"));
+							var month = date.substr(6, 2);
+							if(month == 1) month = "January";
+							else if(month == 2) month = "February";
+							else if(month == 12) month = "December";
+							else if(month == 3) month = "March";
+							else if(month == 4) month = "April";
+							else if(month == 5) month = "May";
+							else if(month == 6) month = "June";
+							else if(month == 7) month = "July";
+							else if(month == 8) month = "August";
+							else if(month == 9) month = "September";
+							else if(month == 10) month = "October";
+							else if(month == 11) month = "November";
+							var year = date.substr(1, 4);
+							var day = date.substr(9, 2);
+							append = "<div class='post'><img src='"+user.get("ProfilePic")+"' height='30' width='30'>"+month+" "+day+", "+year+"<br>"+post.get("Content")+"<br /></div>";
+							if(post.get("Image") != "") append += "<img src="+post.get("Image")+"> </div>";
+							document.getElementById("user_feed").innerHTML = append + innerH;
+						}
+					}
+				});
+			}
+			
+			function createPage() {
+				var user = Parse.User.current();
+				var append = "";
+				append = "<img src='"+user.get("ProfilePic")+"' height='280' width='200' /><button type='button' onclick='location.href='user_edit.html''>Edit</button>";
+				document.getElementById("profile_pic").innerHTML = append;
+				append = "<h1 id='uname'>"+user.get("username")+"</h1>";
+				document.getElementById("nameContainer").innerHTML = append;
+				append = "<h2>About Me</h2><p>"+user.get("About")+"</p>";
+				document.getElementById("aboutme").innerHTML = append;
+				var skills = new Array();
+				skills = user.get("Skills");
+				append = "<h2>My Skills</h2><ul>"
+				for(var i = 0; i < skills.length; i++) {
+					append += "<li>"+skills[i]+"</li>";
+				}
+				append += "</ul>";
+				document.getElementById("skills").innerHTML = append;
+			}
 		</script>
     </head>
     <body>
@@ -31,14 +86,12 @@
 
         <div class="container">
     		<div id = "nameContainer">
-                <h1 id="uname">Aang_07</h1>
+             
             </div>
 
-            <div class = "profileAvatar">
-    			<img src="../../img/avatar.png" height="280" width="200"/>
-            	<button type="button" onclick="location.href='user_edit.html'">Edit</button>
+            <div id="profile_pic">
+			
             </div>
-
             <div id= "user_feed">
                 <div class = "post">
                 	<img src="../../img/avatar.png" height="30" width="30">November 13, 2015 <br>
@@ -62,21 +115,14 @@
 
             <div id="user_info">
               <div class = "info_section">
-            <h2>Friends</h2>
-            <br /><a href="other_profile.html"><img src="../../img/korra.png" height="100" width="100"/></a>
+				<h2>Friends</h2>
+				<br /><a href="other_profile.html"><img src="../../img/korra.png" height="100" width="100"/></a>
               </div>
-                 <div class = "info_section">
-            <h2>About Me</h2>
-            <p>I'm Aang and I love to code because it's cool when I finally get to see all my code working together in harmony. I use functional languages almost exclusively because I love the elegant code they produce and I think they're so much easier to debug. If you're interested in learning more about functional languages definitely send me a message and I'll add you to some of my groups!</p>
-              </div>
-              <div class = "info_section">
-                <h2>My Skills</h2>
-                  <ul>
-                      <li>Haskell</li>
-                      <li>OCaml</li>
-                      <li>Lisp</li>
-                      <li>HTML</li>
-                  </ul>
+            <div id="aboutme" class="info_section">
+				
+            </div>
+              <div id="skills" class = "info_section">
+                
               </div>   
               <div class = "info_section">
             <h2>External Profiles</h2>
@@ -89,5 +135,6 @@
       <footer>
     <p>Copyright 2015, Coding Connectors Inc.</p>
   </footer>
+	<script>createPage()</script>
     </body>
 </html>

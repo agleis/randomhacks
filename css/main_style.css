@@ -122,12 +122,12 @@ ul {
     font-size: 80px;
 }
 
-.profileAvatar{
+#profile_pic{
     width: 30%;
     margin-bottom: 50px;
     display: inline-block;
 }
-.profileAvatar img{
+#profile_pic img{
     width: 100%;
     max-height: 100%;
     margin: auto;
@@ -244,6 +244,21 @@ h1#uname{
 
 #editform {
 	text-align: center;
+}
+
+#postheader {
+	display: inline;
+	padding-right: 20px;
+}
+
+#post {
+	display: inline;
+	width: 70%;
+}
+
+#postbutton {
+	display: inline;
+	margin-left: 20px;
 }
 
 * {
