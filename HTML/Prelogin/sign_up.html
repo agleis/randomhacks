@@ -26,6 +26,7 @@
 				user.set("LastName", last);
 				user.set("Age", Number(age));
 				user.set("email", email);
+				user.set("ProfilePic", "../../img/default-user-image.png");
 				user.signUp(null, {
 				  success: function(user) {
 					document.location.href = 'login.html';

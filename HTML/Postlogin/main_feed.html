@@ -19,7 +19,7 @@
 						var innerH = "";
 						var append = "";
 						var i;
-						for(i = 0; i < list.length; i++) {
+						for(i = list.length - 1; i >= 0; i--) {
 							var post = list[i];
 							innerH = document.getElementById("main").innerHTML;
 							append = "<div class='post'><table width='90%' style='text-align:left;'><tr><td width='85%'><h1>"+user.get("username")+"</h1><br /><br /><i>"+post.get("Content")+"</i><br /><br /><a href='#'><img src='../../img/email.png'></a><a href='#'><img src='../../img/facebook.png'></a><a href='#'><img src='../../img/twitter.png'></a></td><td><br />";
