@@ -205,6 +205,10 @@ h2 {
 	width: 20vw;
 }
 
+p{
+	margin-top:10px;
+}
+
 footer {
 	display:block;
     clear:both;
