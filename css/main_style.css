@@ -97,18 +97,25 @@ ul {
 }
 
 #user_feed{
-    
     border-width: 2px;
     float: right;
     margin-right: 20px;
-    margin-top: -200px;
+    margin-top: -150px;
     width: 65%;
     height: 100%;
 }
 
+#bar {
+	border-width: 2px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -200px;
+    width: 65%;
+	height: 50px;
+}
+
 #user_feed .post, #main_feed .post{
     margin-bottom: 40px;
-    
 }
 
 #nameContainer{
@@ -232,10 +239,6 @@ h1#uname{
     padding-top: 7px;
     padding-left:7px;
     border-radius:15px;
-}
-
-#user_feed{
-    padding-top:45px;
 }
 
 #yourGroups ul li{
