@@ -29,6 +29,17 @@ b{
     margin-top:25px;
 }
 
+#message-side{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+#message-main{
+    float: right;
+    width: 60%;
+}
+
 #title {
     line-height: 60px;
     width:100%;

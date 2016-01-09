@@ -12,10 +12,46 @@
 				Parse.initialize("Wc1q7sHJ3vbi8UQcLckBB86SnkZGeGwdxXpowDzg", "PXNmpPhmuH6UAM6cX0KRITpyjwKQ1oM2oDuasUuu");
 				pullPosts();
 			}
-		</script>
+
+            function getMessages() {
+                var query = new Parse.Query(Parse.User);
+                query.get(user_id, {
+                    success: function(user) {
+                        var relation = user.get("Messages");
+                        var query1 = relation.query();
+                        query1.find({
+                            success: function(list) {
+                                var innerH = "";
+                                var append = "";
+                                var sender = "";
+                                var msgContent = "";
+                                var i;
+
+                                for(i = 0; i < list.length; i++) {
+                                    var message = list[i];
+                                    sender = message.get("Sender");
+                                    msgContent = message.get("MessageContent");
+                                    innerH = document.getElementById("message-side").innerHTML;
+                                    append = "<div class= 'message-friend'><h5>"+sender+"</h5><br>"+msgContent+"</div>";
+                                    document.getElementById("message-side").innerHTML = append + innerH;
+                                }
+
+                            }
+                        });
+                    },
+                    error: function(object, error) {
+                        
+                    }
+                });
+            }
+
+	</script>
     </head>
     <body>
-	<script>initialize()</script>
+	<script>
+        initialize();
+        //getMessages();
+    </script>
     <div class = "page-wrap">
         <div id="title">
             <a href="../Prelogin/home.html"><img src="../../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
@@ -29,12 +65,12 @@
             </ul>
         </div>
         <div id="message-side">
-            <div class= "message-friend"><h5>Sarah</h5>Hey nice job on your python project you just shared!!</div>
-            <div class= "message-friend"><h5>WICC GWC</h5>Come join us for our next meeting on Wednesday!</div>
-            <div class= "message-friend"><h5>Christina</h5>Have you seen this?</div>
-            <div class= "message-friend"><h5>Kara</h5>Want to go to the GWC meeting together next week?</div>
-            <div class= "message-friend"><h5>Shelby</h5>Thanks for your help!</div>
-            <div class= "message-friend"><h5>GWC</h5>Welcome to our site! To get started ... </div>
+            <div class= "message-friend"><h5>Sarah</h5><br>Hey nice job on your python project you just shared!!</div>
+            <div class= "message-friend"><h5>WICC GWC</h5><br>Come join us for our next meeting on Wednesday!</div>
+            <div class= "message-friend"><h5>Christina</h5><br>Have you seen this?</div>
+            <div class= "message-friend"><h5>Kara</h5><br>Want to go to the GWC meeting together next week?</div>
+            <div class= "message-friend"><h5>Shelby</h5><br>Thanks for your help!</div>
+            <div class= "message-friend"><h5>GWC</h5><br>Welcome to our site! To get started ... </div>
         </div>
         <div id= "message-main">
                 <center><h1>Send Message</h1></center>
@@ -46,8 +82,14 @@
             <div id="message-buttons">
                 <center>
                 <button type="button" onclick="location.href='message.html'">Cancel</button>
-                <button type="button" onclick="location.href='message.html'">Send</button>
+                <button type="button" onclick="send()">Send</button>
                 </center>
+
+                <script>
+                    function send(){
+                        
+                    }
+                </script>
             </div>
             <div id="message-feed">
                 <h4>Messages with Sarah</h4>
