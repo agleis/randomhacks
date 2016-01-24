@@ -35,6 +35,14 @@ b{
     height: 100%;
 }
 
+.message-friend :hover{
+    background-color: gray;
+}
+
+.message-friend{
+    padding: 5px;
+}
+
 #message-main{
     float: right;
     width: 60%;

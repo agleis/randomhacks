@@ -7,54 +7,135 @@
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>
+		<script type="text/javascript">
 			function initialize() {
 				Parse.initialize("Wc1q7sHJ3vbi8UQcLckBB86SnkZGeGwdxXpowDzg", "PXNmpPhmuH6UAM6cX0KRITpyjwKQ1oM2oDuasUuu");
-				pullPosts();
 			}
 
             function getMessages() {
-                var query = new Parse.Query(Parse.User);
-                query.get(user_id, {
-                    success: function(user) {
-                        var relation = user.get("Messages");
-                        var query1 = relation.query();
-                        query1.find({
-                            success: function(list) {
-                                var innerH = "";
-                                var append = "";
-                                var sender = "";
-                                var msgContent = "";
-                                var i;
+                var Messages = Parse.Object.extend("Message");
+                var query = new Parse.Query(Messages);
+                query.equalTo("users", Parse.User.current());
+                query.find({
+                    success: function(messages) {
+                        var i;
+                        var j;
 
-                                for(i = 0; i < list.length; i++) {
-                                    var message = list[i];
-                                    sender = message.get("Sender");
-                                    msgContent = message.get("MessageContent");
-                                    innerH = document.getElementById("message-side").innerHTML;
-                                    append = "<div class= 'message-friend'><h5>"+sender+"</h5><br>"+msgContent+"</div>";
-                                    document.getElementById("message-side").innerHTML = append + innerH;
+                        for (i = 0; i < messages.length; i++){
+                            (function(i) {
+                            setTimeout(function() {
+
+                            var message = messages[i];
+                            var friend;
+                            var relation = message.relation("users");
+                            var query =  relation.query();
+
+                            query.find({
+                                success: function(userlist){
+                                    for (j=0; j < userlist.length; j++){
+                                        if (userlist[j].get("username") != Parse.User.current().get("username")){
+                                            friend = userlist[j];
+                                        }
+                                    }
+                                    var messageArray = message.get("content");
+                                    var messageID = "&quot;"+message.id+"&quot;";
+                                    var firstName = friend.get("FirstName");
+                                    var lastName = friend.get("LastName");
+                                    var fullName = firstName+" "+lastName;
+                                    var fullNameStr = "&quot;"+fullName+"&quot;";
+                                    var content = messageArray[messageArray.length-1];
+                                    document.getElementById("message-side").innerHTML += "<div class= 'message-friend' onclick= 'loadConversation("+messageID+", "+fullNameStr+")'><h5>"+firstName+" "+lastName+"</5><br>"+content+"</div>";
                                 }
-
-                            }
-                        });
-                    },
-                    error: function(object, error) {
-                        
+                            });
+                            }, i * 1000);
+                            })(i);
+                        }
                     }
                 });
             }
 
-	</script>
+            function loadConversation(messageID, name) {
+                var conversation;
+                var message = Parse.Object.extend("Message");
+                var query = new Parse.Query(message);
+                query.get(messageID, {
+                    success: function(pastMessages){
+                        conversation = pastMessages;
+                        var messageArray = conversation.get("content");
+                        var content = "<h4>Messages with "+name+"</h4>";
+                        var k;
+
+                        for (k = 0; k < messageArray.length; k++){
+                            content=content+"<div class='past-messages'>"+messageArray[k]+"</div>";
+                        }
+
+                        document.getElementById("message-feed").innerHTML = content;
+                        document.getElementById("receiver").innerHTML = name;
+                        document.getElementById("sendButton").setAttribute("onclick", "send('"+messageID+"')");
+                    }
+                });
+            }
+
+            function send(messageID) {
+                var conversation;
+                var message = Parse.Object.extend("Message");
+                var query = new Parse.Query(message);
+
+                query.get(messageID, {
+                    success: function(pastMessages){
+                        conversation = pastMessages;
+                        var messageArray = conversation.get("content");
+                        var newMessage = Parse.User.current().get("FirstName")+": "+document.getElementById("textArea").value;
+                        messageArray.push(newMessage);
+                        conversation.set("content", messageArray);
+
+                        conversation.save(null, {
+                            success: function(gameScore) {
+                            location.reload();
+                            }
+                        });
+
+                        }
+                });
+            }
+
+        function sendNewMessage(){
+                var conversation = new Parse.Object("Message");
+                var relation = conversation.relation("users");
+                var content = Parse.User.current().get("FirstName")+": "+document.getElementById("textArea").value;
+                messageArray= [content];
+                conversation.set("content", messageArray);
+                var queryFriend = new Parse.Query(Parse.User);
+                queryFriend.equalTo("username", document.getElementById("receiver").value);
+                queryFriend.find({
+                    success: function(friendlist){
+                        friend = friendlist[0];
+                        relation.add(friend);
+                        relation.add(Parse.User.current());
+                        conversation.save(null, {
+                            success: function(conversation) {
+                                location.reload();
+                            }
+                        });
+                    }
+                });
+        }
+
+        function newMessage() {
+            document.getElementById("message-feed").innerHTML="";
+            document.getElementById("sendButton").setAttribute("onclick", "sendNewMessage()");
+        }
+
+    </script>
     </head>
     <body>
-	<script>
+    <script>
         initialize();
-        //getMessages();
+        getMessages();
     </script>
     <div class = "page-wrap">
         <div id="title">
-            <a href="../Prelogin/home.html"><img src="../../img/logo.png" height="60px" /><h3>Coding Connection</h3></a>
+            <h3>Coding Connection</h3>
             <ul class="nav-links">
                 <li><a href="main_feed.html">Home</a></li>
                 <li><a href="message.html">Messages</a></li>
@@ -65,36 +146,23 @@
             </ul>
         </div>
         <div id="message-side">
-            <div class= "message-friend"><h5>Sarah</h5><br>Hey nice job on your python project you just shared!!</div>
-            <div class= "message-friend"><h5>WICC GWC</h5><br>Come join us for our next meeting on Wednesday!</div>
-            <div class= "message-friend"><h5>Christina</h5><br>Have you seen this?</div>
-            <div class= "message-friend"><h5>Kara</h5><br>Want to go to the GWC meeting together next week?</div>
-            <div class= "message-friend"><h5>Shelby</h5><br>Thanks for your help!</div>
-            <div class= "message-friend"><h5>GWC</h5><br>Welcome to our site! To get started ... </div>
+            <div class= "message-friend" onclick= "newMessage()"><h5>New Message</h5></div>
         </div>
         <div id= "message-main">
                 <center><h1>Send Message</h1></center>
             <div id="message-field">
                 <center>
-                <textarea name="message" rows="10" cols="100"></textarea>
+                <textarea name="receiver" rows="1" cols="100" id="receiver">To... (username)</textarea>
+                <textarea name="message" rows="10" cols="100" id="textArea"></textarea>
                 </center>
             </div>
             <div id="message-buttons">
                 <center>
                 <button type="button" onclick="location.href='message.html'">Cancel</button>
-                <button type="button" onclick="send()">Send</button>
+                <button type="button" id="sendButton" onclick="sendNewMessage()">Send</button>
                 </center>
-
-                <script>
-                    function send(){
-                        
-                    }
-                </script>
             </div>
             <div id="message-feed">
-                <h4>Messages with Sarah</h4>
-                <div class="past-messages">Hey nice job on your python project you just shared!!</div>
-                <div class="past-messages-2">thanks sarah!</div>
             </div>
         </div>
     </div>
